@@ -1,7 +1,15 @@
 .taskStatusContainer{
     display: flex;
     justify-content: space-between;
-    
+    width:46rem ;
     align-items: center;
     border: 2px solid red;
+}
+.taskCreate{
+    color: var(--blue-300);
+    font-weight: 700;
+}
+.taskConcluidas{
+    color: var(--purple-700);
+    font-weight: 700;
 }
