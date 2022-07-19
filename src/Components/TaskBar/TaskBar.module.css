@@ -1,0 +1,54 @@
+.newTaskInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: calc(0px - 1.3rem - 6px);
+   
+}
+.newTaskInput textarea{
+    width: 46rem;
+    height: 3.375rem;
+    padding: 1rem;
+    flex-grow: 1;
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    color: var(--gray-100);
+    resize: none;
+    
+} .buttonTask{
+    width: 5.625rem;
+    height: 3.375rem;
+    border-radius: 8px;
+    background-color: var(--blue-700);
+    color: var(--gray-100);
+    font-weight: 700;
+    cursor: pointer;
+    border: transparent;
+    outline: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    line-height: 1.9;
+    transition: 0.2s;
+}
+.newTaskInput textarea:focus{
+    outline: transparent;
+    box-shadow:0 0 0 2px var(--purple-700) ;
+    
+}
+.buttonTask:hover{
+    transition: 0.2s;
+    background-color: var(--blue-300);
+    outline: transparent;
+
+}
