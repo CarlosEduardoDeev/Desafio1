@@ -50,5 +50,31 @@
     transition: 0.2s;
     background-color: var(--blue-300);
     outline: transparent;
+    width: 5.625rem;
+    height: 3.375rem;
+    border-radius: 8px;
+    color: var(--gray-100);
 
+}
+.container2{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    flex: 0;
+    align-items: flex-start;
+    margin-top: 64px;
+    
+    justify-content: center;
+    align-items: center;
+
+}
+.taskContainer{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    flex: 0;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
 }

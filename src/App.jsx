@@ -4,6 +4,7 @@ import { TaskStatus } from './Components/TaskStatus/TaskStatus'
 import { TaskPost } from './Components/TaskPost/TaskPost'
 import './Global.css'
 import style from './App.module.css'
+import { Taks } from './Components/Task/Taks'
 
 
 
@@ -17,11 +18,13 @@ function App() {
         <TaskBar/>
       </div>
       <main >
-        <TaskStatus/>
+        {/* <TaskStatus/> */}
       </main>
       <footer>
-     
-      {/* <TaskPost/> */}
+         <div className={style.list} >
+        
+       {/* <TaskPost/>  */}
+       </div> 
       </footer>
     </div>
   )

@@ -1,0 +1,105 @@
+.taskNoCheck{
+    width: 46rem;
+    height: 4.5;
+    padding: 1rem;
+    background-color: var(--gray-500);
+    border-radius: 8px;
+    gap: 12px;
+    border: 1px solid var(--gray-400);
+    color: var(--gray-100);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    font-weight: 400;
+    order: 1;
+    font-size: 14px;
+    display: flex;
+    
+    
+}
+.check{
+    color: white;
+    width: 12px;
+}
+.list{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    flex: 0;
+    align-items: flex-start;
+}
+.circleCheckOff{
+    justify-content: center;
+    align-items: center;
+    width: 1.091rem;
+    height: 1.091rem;
+    border: 2px solid var(--blue-300);
+    border-radius: 25px;
+    cursor: pointer;
+}
+.circleCheckOff:hover{
+    width: 1.091rem;
+    height: 1.091rem;
+    border: 2px solid var(--blue-700);
+    border-radius: 25px;
+    cursor: pointer;
+}
+.circleCheckOn{
+    width: 1.091rem;
+    height: 1.091rem;
+    border: 2px solid var(--purple-300);
+    background-color: var(--purple-300);
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration-line: line-through;
+}
+.circleCheckOn:hover{
+    width: 1.091rem;
+    height: 1.091rem;
+    border: 2px solid var(--purple-700);
+    background-color: var(--purple-700);
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration-line: line-through;
+}
+.taskNoCheckOn{
+    width: 46rem;
+    height: 4.5;
+    padding: 1rem;
+    background-color: var(--gray-500);
+    border-radius: 8px;
+    gap: 12px;
+    border: 1px solid var(--gray-400);
+    color: var(--gray-300);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    font-weight: 400;
+    order: 1;
+    font-size: 14px;
+    display: flex;
+    text-decoration-line: line-through;
+
+    
+}
+button{
+    background-color: transparent;
+    border: 0;
+    color: var(--gray-300);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    width: 1.5rem;
+    height: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+button:hover{
+    background-color: var(--gray-400);
+    border: 0;
+    color: var(--red-);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    width: 1.5rem;
+    height: 1.5rem;
+}
