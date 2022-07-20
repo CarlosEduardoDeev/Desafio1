@@ -1,0 +1,37 @@
+.taskStatusContainer{
+    display: flex;
+    justify-content: space-between;
+    width:46rem ;
+    align-items: center;
+   
+ 
+}
+.taskCreate{
+    color: var(--blue-300);
+    font-weight: 700;
+}
+.taskConcluidas{
+    color: var(--purple-700);
+    font-weight: 700;
+    
+}
+.containerCreate p {
+    align-items: center;
+    display: inline;
+    flex-direction: row;
+    padding: 2px;
+}
+.containerConcluidas p{
+    display: inline;
+    flex-direction: row;
+    padding:2px;
+}
+
+.numberTask{
+    color: var(--gray-200);
+    font-weight: 700;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: var(--gray-400);
+    ;    
+}
