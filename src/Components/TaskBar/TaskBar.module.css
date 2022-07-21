@@ -46,6 +46,10 @@
     box-shadow:0 0 0 2px var(--purple-700) ;
     
 }
+.buttonTask:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 .buttonTask:hover{
     transition: 0.2s;
     background-color: var(--blue-300);

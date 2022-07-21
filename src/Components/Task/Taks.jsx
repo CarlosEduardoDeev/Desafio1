@@ -4,7 +4,7 @@ import {Trash,Check} from 'phosphor-react';
 
 
 
-export function Taks({content}){
+export function Taks({content,onDeleteTask}){
 
 
     const [checked,setChecked] = useState(true)
@@ -14,8 +14,8 @@ export function Taks({content}){
     }
 
     function handleDeleteTask(){
-        console.log("Deletar")
         onDeleteTask(content)
+        
     }
 
 
@@ -25,7 +25,7 @@ export function Taks({content}){
       
             <div className={checkedNow === false ?style.taskNoCheckOn : style.taskNoCheck}>
                 <div className={checkedNow === true ? style.circleCheckOff:style.circleCheckOn} onClick={handleClickCheckBoxOn}>{checkedNow ?<div></div> :<Check color='white' weight='bold' size={14} />}</div>
-                <p>{content}</p>
+                <p>{content.title}</p>
                 <button onClick={handleDeleteTask}>
                     <Trash/>
                 </button>
