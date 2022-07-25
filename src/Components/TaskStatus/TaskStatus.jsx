@@ -1,7 +1,7 @@
 
 import style from './TaskStatus.module.css'
 
-export function TaskStatus({statusTaskCreate}){
+export function TaskStatus({statusTaskCreate,complete}){
     return(
         <div>
             <div className={style.taskStatusContainer}>
@@ -12,7 +12,7 @@ export function TaskStatus({statusTaskCreate}){
                 </div>
                 <div className={style.containerConcluidas}>
                     <p className={style.taskConcluidas} >Concluidas</p>
-                    <p className={style.numberTask} >1 de {statusTaskCreate}</p>
+                    <p className={style.numberTask} > {complete} de {statusTaskCreate}</p>
                 </div>
             </div>
         </div>

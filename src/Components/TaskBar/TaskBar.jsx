@@ -13,28 +13,52 @@ import { v4 as uiidv4 } from 'uuid'
 
     const [newTaskText,setNewTaskText] = useState([])
 
+    const [newTaskTextCheck,setNewTaskTextCheck] = useState([])
+
+    const [taskId,setTaskId] = useState()
+
     const [task,setTask] = useState([
       
         
     ])
 
 
-  
-
     function handleNewTaskChange(){
         event.target.setCustomValidity('')
         setNewTaskText(event.target.value)
     }
 
+    function taksCheck(taskID){
+        
+        
+       
+       const newTaskCheck = task.map((task) => {
+            
+                if (task.id === taskID) {
+                return{
+                    ...task,
+                    isComplete: !task.isComplete
+                    }
+                } 
+
+        return task 
+             
+       } )
+       
+       setTask(newTaskCheck)
+
+       
+    }
+
+
     function handleNewtask(){
         event.preventDefault()
 
-        const Tasktest ="tste"
          
         const teste = {
             id: uiidv4(),
             title: newTaskText,
-            isComplete:false
+            isComplete:true
         }
 
         setTask([...task,teste])
@@ -55,10 +79,20 @@ import { v4 as uiidv4 } from 'uuid'
     function handleNewTaskInvalid(){
         event.target.setCustomValidity('Esse campo é obrigatorio!')
     }
+    
+  
+    const filteredArrayLength = task.filter((complete) =>{
+        return(
+            complete.isComplete === false
+        )
+    }).length
+   
 
 
     const totalTask = task.length
-        
+    console.log(filteredArrayLength)
+    
+
     const isNewCommentEmpty = newTaskText.length === 0 
 
     return(
@@ -74,7 +108,8 @@ import { v4 as uiidv4 } from 'uuid'
                 />
                     
                     <footer>
-                        <button type='submit' disabled={isNewCommentEmpty} className={style.buttonTask} > 
+                        <button type='submit' disabled={isNewCommentEmpty} 
+                        className={style.buttonTask} > 
                             Criar
                             <PlusCircle size={24} />
                         </button>    
@@ -83,14 +118,17 @@ import { v4 as uiidv4 } from 'uuid'
         </div>
         <div  className={style.container2}>
             <div>
-                <TaskStatus statusTaskCreate={totalTask}/>
+                <TaskStatus statusTaskCreate={totalTask} complete={filteredArrayLength}/>
             </div>
             <div className={style.taskContainer} >
                   
             {totalTask === 0 ? <TaskPost/>:<div></div>}
                  {task.map(tasks =>{
                     return(
-                        <Taks key={tasks.id} content={tasks} onDeleteTask={deleteTask}/>
+                        <Taks key={tasks.id} content={tasks} 
+                        onDeleteTask={deleteTask}
+                        checkValidt={taksCheck}
+                        />
                     )
                 })}
 
