@@ -28,7 +28,7 @@ import { v4 as uiidv4 } from 'uuid'
         setNewTaskText(event.target.value)
     }
 
-    function taksCheck(taskID){
+    const  taksCheck = async (taskID)  =>{
         
         
        
@@ -94,6 +94,8 @@ import { v4 as uiidv4 } from 'uuid'
     
 
     const isNewCommentEmpty = newTaskText.length === 0 
+
+    console.logz
 
     return(
         <div  >

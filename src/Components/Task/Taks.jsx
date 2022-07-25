@@ -36,7 +36,7 @@ export function Taks({content,onDeleteTask,checkValidt}){
     return(
       
             <div className={checkedNow === false ?style.taskNoCheckOn : style.taskNoCheck}>
-                <div id={content.id} className={checkedNow === true ? style.circleCheckOff:style.circleCheckOn} onClick={handleClickCheckBoxOn}>{checkedNow ?<div id={content.id} > </div> :<Check color='white' weight='bold' size={14} id={content.id} />}</div>
+                <div id={content.id} className={checkedNow === true ? style.circleCheckOff:style.circleCheckOn} onClick={handleClickCheckBoxOn}>{checkedNow ?<div> </div> :<Check color='white' weight='bold' size={14} id={content.id} />}</div>
 
                 <p>{content.title}</p>
 
